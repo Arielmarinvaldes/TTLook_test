@@ -1,5 +1,6 @@
 # from datetime import datetime, timezone, timedelta
 import time
+
 # # Tiempo en milisegundos
 # time_in_milliseconds = 1721409921000
 
@@ -36,3 +37,20 @@ z_milliseconds = int(z_datetime.timestamp() * 1000)
 
 print("Fecha de inicio en milisegundos:", y_milliseconds)
 print("Fecha de fin en milisegundos:", z_milliseconds)
+
+
+
+def fecha_hora_a_milisegundos(fecha_str, hora_str):
+    """
+    Convierte una fecha y hora dadas en formato de cadena a un timestamp en milisegundos.
+    Args:
+        fecha_str (str): Fecha en formato 'dd-mm-yyyy'.
+        hora_str (str): Hora en formato 'HH:MM:SS'.
+    Returns:
+        int: Timestamp en milisegundos.
+    """
+    # Convertir la fecha y la hora en un objeto datetime
+    dt = datetime.strptime(f"{fecha_str} {hora_str}", "%d-%m-%Y %H:%M:%S")
+    # Obtener el timestamp en segundos y convertirlo a milisegundos
+    timestamp_milisegundos = int(dt.timestamp() * 1000)
+    return timestamp_milisegundos

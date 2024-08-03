@@ -3,23 +3,17 @@ import json
 import time
 
 current_timestamp = int(time.time() * 1000)
-
-# Calcula la duración de 24 horas en milisegundos
-duration_24_hours = 24 * 60 * 60 * 1000
-end_timestamp = current_timestamp + duration_24_hours
-
 url = "https://euapi.ttlock.com/v3/keyboardPwd/get"
 
 # Datos de la solicitud
 data = {
-    'clientId': 'f9f9006b506248278f857f0734d1cc34',
-    'accessToken': '010e282e4c9fb698f23c114c3d7ddd2b',
-    # 'lockId': 10463855, # tio
-    'lockId': 13345048,
+    'clientId': '???',
+    'accessToken': '????',
+    'lockId': "???",
     'keyboardPwdType': 3,
     'keyboardPwdName': 'test',
-    'startDate': "2024-20-19 09:59:00",
-    'endDate':"2025-10-18 00:00:00",
+    'startDate': "???",
+    'endDate':"???",
     'date': current_timestamp
 }
 
