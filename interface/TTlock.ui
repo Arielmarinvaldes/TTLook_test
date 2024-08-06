@@ -17,8 +17,8 @@
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
+      <x>-30</x>
+      <y>-10</y>
       <width>1121</width>
       <height>611</height>
      </rect>
@@ -66,7 +66,7 @@
    <widget class="QPushButton" name="get_door">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>480</x>
       <y>40</y>
       <width>70</width>
       <height>30</height>
@@ -87,7 +87,7 @@
      <rect>
       <x>10</x>
       <y>80</y>
-      <width>491</width>
+      <width>541</width>
       <height>471</height>
      </rect>
     </property>
@@ -125,7 +125,7 @@
    <widget class="QPushButton" name="unlock_key">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>400</x>
       <y>40</y>
       <width>70</width>
       <height>30</height>
@@ -287,6 +287,101 @@
       <width>191</width>
       <height>151</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="batery_status">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>527</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    QProgressBar {
+        border: 1px solid grey;
+        border-radius: 10px; /* Radio de la esquina */
+        text-align: center;
+    }
+    QProgressBar::chunk {
+        background-color: #05B8CC; /* Color del progreso */
+        border-radius: 10px; /* Radio de la esquina para el área de progreso */
+    }</string>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="battery_label">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>503</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Battery</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="on_off_button">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>460</y>
+      <width>71</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ON / OFF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="randon_code_label">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>20</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Randon Códe</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="user_label_custom">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>10</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>User</string>
     </property>
    </widget>
   </widget>

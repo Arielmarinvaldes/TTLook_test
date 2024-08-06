@@ -37,3 +37,6 @@ else:
     # Imprimir el contenido de la respuesta en caso de un código de estado 400
     if response.status_code == 400:
         print(f"Contenido de la respuesta: {response.text}")
+
+
+

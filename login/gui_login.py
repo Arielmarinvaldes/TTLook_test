@@ -73,10 +73,10 @@ class Estructured(QMainWindow):
                 hashed_password, salt = result
                 if verificar_hash(password, hashed_password, salt):
                     talk(f"Bienvenido, {user}!")
-                    print(f"Bienvenido, {user}!")
-                    
+                    print(f"Bienvenido, {user}")
+
                     # Cierra la ventana de inicio de sesión y abre el panel de administración
-                    self.open_admin_panel()
+                    self.open_admin_panel(user) # Pasa el usuario al abrir el panel de administración
                 else:
                     QMessageBox.critical(self, "Error", "Contraseña incorrecta. Acceso denegado.")
             else:
@@ -84,12 +84,13 @@ class Estructured(QMainWindow):
         finally:
             conn.close()
 
-    def open_admin_panel(self):
-        self.close()  # Cierra la ventana de inicio de sesión
-        self.ventana = QtWidgets.QMainWindow()
-        self.uia = Ui_MainWindow()
-        self.uia.setupUi(self.ventana)
-        self.ventana.show()
+    def open_admin_panel(self, user):
+        self.hide()  # Oculta la ventana de inicio de sesión
+        self.admin_panel = QtWidgets.QMainWindow()  # Crea una nueva ventana
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self.admin_panel)
+        self.ui.set_user_label(user)  # Pasa el nombre de usuario al panel de administración
+        self.admin_panel.show()
 
     def register(self):
         self.ventana = QtWidgets.QMainWindow()
